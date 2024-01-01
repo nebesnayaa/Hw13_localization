@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <v:String x:Key="windowTitle">Форма</v:String>
+    <v:String x:Key="firstNameLabel">Ім'я:</v:String>
+    <v:String x:Key="lastNameLabel">Фамілія:</v:String>
+    <v:String x:Key="phoneNumberLabel">Телефон:</v:String>
+    <v:String x:Key="okButton">OK</v:String>
+    <v:String x:Key="cancelButton">Скасувати</v:String>
+    <v:String x:Key="changeLanguageButton">Змінити мову</v:String>
+</ResourceDictionary>

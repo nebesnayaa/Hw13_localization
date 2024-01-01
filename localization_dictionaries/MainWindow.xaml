@@ -1,0 +1,52 @@
+﻿<Window x:Class="HW13_localization_languages.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HW13_localization_languages"
+        mc:Ignorable="d"
+        Title="{DynamicResource windowTitle}" Height="400" Width="450">
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Width" Value="Auto"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="Height" Value="25"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="firstNameLabel" Content="{DynamicResource firstNameLabel}"/>
+        <TextBox Grid.Column="1" x:Name="firstNameTextBox"/>
+
+        <Label x:Name="lastNameLabel" Grid.Row="1" Content="{DynamicResource lastNameLabel}"/>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="lastNameTextBox"/>
+
+        <Label x:Name="phoneNumberLabel" Grid.Row="2" Content="{DynamicResource phoneNumberLabel}"/>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="phoneNumberTextBox"/>
+
+        <Button Grid.Row="3"  x:Name="okButton" Content="{DynamicResource okButton}" Click="OKButton_Click"></Button>
+        <Button Grid.Row="3" Grid.Column="1" x:Name="cancelButton" Content="{DynamicResource cancelButton}"  Click="CancelButton_Click" HorizontalAlignment="Right"/>
+        <Button Grid.Row="4" Grid.ColumnSpan="2" x:Name="changeLanguageButton" Content="{DynamicResource changeLanguageButton}" Click="ChangeLanguageButton_Click" Width="Auto"/>
+    </Grid>
+</Window>
